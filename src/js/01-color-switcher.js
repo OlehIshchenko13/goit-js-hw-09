@@ -17,7 +17,8 @@ function onClickBtnStart  (e) {
     refs.body.style.backgroundColor = getRandomHexColor()
     },1000)
 
-    refs.buttonStart.disabled = true;
+    refs.buttonStart.disabled = true ;
+    refs.buttonStop.disabled = false ;
 
      
 }
@@ -25,5 +26,6 @@ function onClickBtnStart  (e) {
 function onClickBtnStop(e) {
   clearInterval(timerId)
   refs.buttonStart.disabled = false;
+  refs.buttonStop.disabled = true;
   
 }
