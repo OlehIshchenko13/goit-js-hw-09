@@ -2,6 +2,8 @@
 import flatpickr from "flatpickr";
 // Дополнительный импорт стилей
 import "flatpickr/dist/flatpickr.min.css";
+
+
 flatpickr("#datetime-picker", {
 	enableTime: true,
 	time_24hr: true,
@@ -11,6 +13,7 @@ flatpickr("#datetime-picker", {
 		console.log(selectedDates[0]);
 	},
 });
+
 const refs = {
 	date: document.querySelector('#datetime-picker'),
 	start: document.querySelector('[data-start]'),
@@ -85,7 +88,3 @@ refs.start.addEventListener('click', () => {
 function addLeadingZero(value) {
 	return String(value).padStart(2, '0');
 }
-
-
-
-
