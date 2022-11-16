@@ -17,7 +17,7 @@ flatpickr("#datetime-picker", {
 const refs = {
 	date: document.querySelector('#datetime-picker'),
 	start: document.querySelector('[data-start]'),
-	tooltip: document.querySelector('.tooltip'),
+	errorAlert: document.querySelector('.errorAlert'),
 	values: document.querySelectorAll('.value')
 }
 
@@ -58,11 +58,11 @@ refs.date.addEventListener("change", () => {
 
 		refs.values.textContent = "00"
 
-		refs.tooltip.classList.remove('hidden')
+		refs.errorAlert.classList.remove('hidden')
 	}
 
 	if (refs.date.value == "") {
-		refs.tooltip.classList.add('hidden')
+		refs.errorAlert.classList.add('hidden')
 	}
 
 	if (new Date(refs.date.value) > new Date) {
@@ -79,7 +79,7 @@ refs.start.addEventListener('click', () => {
 	}
 
 	refs.start.setAttribute("disabled", true);
-	refs.tooltip.classList.add('hidden')
+	refs.errorAlert.classList.add('hidden')
 
 	timeId = setInterval(timer, 1000);
 });
