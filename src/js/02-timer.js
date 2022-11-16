@@ -4,6 +4,7 @@ import flatpickr from "flatpickr";
 import "flatpickr/dist/flatpickr.min.css";
 
 
+
 flatpickr("#datetime-picker", {
 	enableTime: true,
 	time_24hr: true,
@@ -17,7 +18,7 @@ flatpickr("#datetime-picker", {
 const refs = {
 	date: document.querySelector('#datetime-picker'),
 	start: document.querySelector('[data-start]'),
-	errorAlert: document.querySelector('.errorAlert'),
+	tooltip: document.querySelector('.tooltip'),
 	values: document.querySelectorAll('.value')
 }
 
@@ -58,11 +59,11 @@ refs.date.addEventListener("change", () => {
 
 		refs.values.textContent = "00"
 
-		refs.errorAlert.classList.remove('hidden')
+		refs.tooltip.classList.remove('hidden')
 	}
 
 	if (refs.date.value == "") {
-		refs.errorAlert.classList.add('hidden')
+		refs.tooltip.classList.add('hidden')
 	}
 
 	if (new Date(refs.date.value) > new Date) {
@@ -79,11 +80,10 @@ refs.start.addEventListener('click', () => {
 	}
 
 	refs.start.setAttribute("disabled", true);
-	refs.errorAlert.classList.add('hidden')
+	refs.tooltip.classList.add('hidden')
 
 	timeId = setInterval(timer, 1000);
 });
-
 
 
 function addLeadingZero(value) {

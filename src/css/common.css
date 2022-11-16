@@ -11,7 +11,7 @@ body {
 	color: #212121;
 	line-height: 1.5;
 }
- 
+
 img {
 	display: block;
 	max-width: 100%;
@@ -19,7 +19,7 @@ img {
 
 
 .container {
-
+  
 	position: relative;
 	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 	max-width: 900px;
@@ -42,7 +42,7 @@ img {
 	width: 150px;
 	padding: 5px;
 	border: 2px solid darkslategray;
-	
+	border-radius: 6px;
 	font-size: 15px;
 	text-transform: uppercase;
 	font-family: inherit;
@@ -51,11 +51,12 @@ img {
 .start-btn {
 	padding: 5px;
 	background-color: transparent;
+	border: 2px solid darkslategray;
+	border-radius: 6px;
 	font-size: 15px;
 	text-transform: uppercase;
 	font-family: inherit;
 }
-
 
 .start-btn:disabled {
 	background-color: lightgray;
@@ -70,7 +71,7 @@ img {
 	font-size: 15px;
 }
 
-.errorAlert {
+.tooltip {
 	position: absolute;
 	top: -30%;
 	right: 50%;
