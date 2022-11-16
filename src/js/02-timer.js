@@ -85,6 +85,7 @@ refs.start.addEventListener('click', () => {
 });
 
 
+
 function addLeadingZero(value) {
 	return String(value).padStart(2, '0');
 }

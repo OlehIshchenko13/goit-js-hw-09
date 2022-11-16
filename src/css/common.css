@@ -17,7 +17,9 @@ img {
 	max-width: 100%;
 }
 
+
 .container {
+  
 	position: relative;
 	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 	max-width: 900px;
@@ -26,6 +28,7 @@ img {
 	text-align: center;
 }
 
+
 .timer {
 	display: flex;
 	justify-content: center;
@@ -33,6 +36,7 @@ img {
 	gap: 50px;
 	margin-top: 60px;
 }
+
 
 .date-form {
 	width: 150px;
@@ -69,12 +73,11 @@ img {
 
 .tooltip {
 	position: absolute;
-	top: -25%;
+	top: -30%;
 	right: 50%;
 	transform: translate(50%);
-
 	display: inline-block;
-	font-size: 15px;
+	font-size: 30px;
 	color: red;
 	border-radius: 3px;
 }
